@@ -56,10 +56,13 @@
       const gstAmt = net * (g/100);
       const total = net + gstAmt;
 
-      outDiscount.textContent = "₹" + discountAmt.toFixed(2);
-      outNet.textContent = "₹" + net.toFixed(2);
-      outGST.textContent = "₹" + gstAmt.toFixed(2);
-      final.textContent = "₹" + total.toFixed(2);
+// Round off final price
+const roundedTotal = Math.round(total);
+
+outDiscount.textContent = "₹" + discountAmt.toFixed(2);
+outNet.textContent = "₹" + net.toFixed(2);
+outGST.textContent = "₹" + gstAmt.toFixed(2);
+final.textContent = "₹" + roundedTotal;
     }
 
     [base, discount, gst].forEach(el => el.addEventListener('input', calculate));
