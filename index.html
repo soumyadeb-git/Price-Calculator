@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Price Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 flex items-center justify-center min-h-screen p-4">
+  <div class="bg-white shadow-xl rounded-2xl p-6 w-full max-w-md transform transition-all hover:scale-[1.01] duration-200">
+    <h2 class="text-2xl font-extrabold text-center text-indigo-700 mb-6 tracking-wide">💰 Price Calculator</h2>
+
+    <div class="space-y-4">
+      <div>
+        <label for="base" class="block text-sm font-semibold text-gray-700">Base Price (₹)</label>
+        <input type="number" id="base" placeholder="18000" value="18000" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition" />
+      </div>
+
+      <div>
+        <label for="discount" class="block text-sm font-semibold text-gray-700">Discount (%)</label>
+        <input type="number" id="discount" placeholder="42" value="42" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition" />
+      </div>
+
+      <div>
+        <label for="gst" class="block text-sm font-semibold text-gray-700">GST (%)</label>
+        <input type="number" id="gst" placeholder="18" value="18" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition" />
+      </div>
+    </div>
+
+    <div class="mt-6 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 border border-indigo-200 rounded-lg p-4 text-center space-y-2 shadow-sm">
+      <p class="text-gray-700 font-medium">Discount Amount: <span id="outDiscount" class="font-bold text-red-600">₹0.00</span></p>
+      <p class="text-gray-700 font-medium">Net Price: <span id="outNet" class="font-bold text-gray-800">₹0.00</span></p>
+      <p class="text-gray-700 font-medium">GST Amount: <span id="outGST" class="font-bold text-green-600">₹0.00</span></p>
+      <p class="text-xl font-extrabold text-indigo-700 mt-2 animate-pulse">Final Price: <span id="final">₹0.00</span></p>
+    </div>
+  </div>
+
+  <script>
+    const base = document.getElementById('base');
+    const discount = document.getElementById('discount');
+    const gst = document.getElementById('gst');
+    const final = document.getElementById('final');
+    const outDiscount = document.getElementById('outDiscount');
+    const outNet = document.getElementById('outNet');
+    const outGST = document.getElementById('outGST');
+
+    function calculate(){
+      const b = parseFloat(base.value) || 0;
+      const d = parseFloat(discount.value) || 0;
+      const g = parseFloat(gst.value) || 0;
+
+      const discountAmt = b * (d/100);
+      const net = b - discountAmt;
+      const gstAmt = net * (g/100);
+      const total = net + gstAmt;
+
+      outDiscount.textContent = "₹" + discountAmt.toFixed(2);
+      outNet.textContent = "₹" + net.toFixed(2);
+      outGST.textContent = "₹" + gstAmt.toFixed(2);
+      final.textContent = "₹" + total.toFixed(2);
+    }
+
+    [base, discount, gst].forEach(el => el.addEventListener('input', calculate));
+    calculate();
+  </script>
+</body>
+</html>
