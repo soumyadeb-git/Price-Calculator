@@ -6,34 +6,34 @@
   <title>Price Calculator</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 flex items-center justify-center p-3">
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-r from-sky-200 via-indigo-200 to-purple-200 p-3">
 
-  <div class="bg-white shadow-2xl rounded-2xl p-5 w-full max-w-lg">
+  <div class="bg-white/30 backdrop-blur-xl shadow-2xl rounded-3xl p-6 w-full max-w-lg border border-white/40">
     <!-- Title -->
-    <h2 class="text-xl md:text-2xl font-extrabold text-center text-indigo-700 mb-4 tracking-wide">💰 Price Calculator</h2>
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-5 tracking-wide drop-shadow-sm">💎 Price Calculator</h2>
 
     <!-- Input Fields -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <div>
-        <label for="base" class="block text-sm font-semibold text-gray-700">Base Price (₹)</label>
-        <input type="number" id="base" value="18000" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition" />
+        <label for="base" class="block text-sm font-medium text-gray-800">Base Price (₹)</label>
+        <input type="number" id="base" value="18000" class="w-full mt-1 px-3 py-2 bg-white/40 border border-white/60 rounded-xl shadow-sm focus:ring-2 focus:ring-sky-400 focus:border-sky-400 outline-none transition" />
       </div>
       <div>
-        <label for="discount" class="block text-sm font-semibold text-gray-700">Discount (%)</label>
-        <input type="number" id="discount" value="42" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition" />
+        <label for="discount" class="block text-sm font-medium text-gray-800">Discount (%)</label>
+        <input type="number" id="discount" value="42" class="w-full mt-1 px-3 py-2 bg-white/40 border border-white/60 rounded-xl shadow-sm focus:ring-2 focus:ring-sky-400 focus:border-sky-400 outline-none transition" />
       </div>
       <div>
-        <label for="gst" class="block text-sm font-semibold text-gray-700">GST (%)</label>
-        <input type="number" id="gst" value="18" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition" />
+        <label for="gst" class="block text-sm font-medium text-gray-800">GST (%)</label>
+        <input type="number" id="gst" value="18" class="w-full mt-1 px-3 py-2 bg-white/40 border border-white/60 rounded-xl shadow-sm focus:ring-2 focus:ring-sky-400 focus:border-sky-400 outline-none transition" />
       </div>
     </div>
 
     <!-- Results -->
-    <div class="mt-5 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 border border-indigo-200 rounded-xl p-4 text-center space-y-1 shadow-inner">
+    <div class="mt-6 bg-white/40 backdrop-blur-lg border border-white/50 rounded-2xl p-4 text-center space-y-1 shadow-inner">
       <p class="text-gray-700 font-medium text-sm">Discount Amount: <span id="outDiscount" class="font-bold text-red-600">₹0.00</span></p>
       <p class="text-gray-700 font-medium text-sm">Net Price: <span id="outNet" class="font-bold text-gray-800">₹0.00</span></p>
       <p class="text-gray-700 font-medium text-sm">GST Amount: <span id="outGST" class="font-bold text-green-600">₹0.00</span></p>
-      <p class="text-lg md:text-xl font-extrabold text-indigo-700 mt-2 animate-pulse">Final Price: <span id="final">₹0.00</span></p>
+      <p class="text-lg md:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-500 to-purple-600 mt-3 drop-shadow animate-pulse">Final Price: <span id="final">₹0.00</span></p>
     </div>
   </div>
 
@@ -56,13 +56,12 @@
       const gstAmt = net * (g/100);
       const total = net + gstAmt;
 
-// Round off final price
-const roundedTotal = Math.round(total);
+      const roundedTotal = Math.round(total);
 
-outDiscount.textContent = "₹" + discountAmt.toFixed(2);
-outNet.textContent = "₹" + net.toFixed(2);
-outGST.textContent = "₹" + gstAmt.toFixed(2);
-final.textContent = "₹" + roundedTotal;
+      outDiscount.textContent = "₹" + discountAmt.toFixed(2);
+      outNet.textContent = "₹" + net.toFixed(2);
+      outGST.textContent = "₹" + gstAmt.toFixed(2);
+      final.textContent = "₹" + roundedTotal;
     }
 
     [base, discount, gst].forEach(el => el.addEventListener('input', calculate));
