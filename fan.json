@@ -1,0 +1,37 @@
+{
+  "Base Ceiling Fan": [
+    { "model": "ES-40", "600mm": null, "900mm": null, "1200mm": 4585, "1320mm": null, "1400mm": null },
+    { "model": "Samraat/ES", "600mm": 3290, "900mm": 3495, "1200mm": 3495, "1320mm": null, "1400mm": 3650 },
+    { "model": "Speedster/ES", "600mm": 3270, "900mm": null, "1200mm": null, "1320mm": null, "1400mm": null },
+    { "model": "SS-390 Metallic/ES", "600mm": null, "900mm": null, "1200mm": 4315, "1320mm": null, "1400mm": null },
+    { "model": "SS-390/ES", "600mm": 3665, "900mm": 4100, "1200mm": 4100, "1320mm": null, "1400mm": 4315 },
+    { "model": "Velocity/ES", "600mm": null, "900mm": null, "1200mm": 4025, "1320mm": null, "1400mm": null },
+    { "model": "Xpress Air/ES", "600mm": null, "900mm": null, "1200mm": 2760, "1320mm": null, "1400mm": null }
+  ],
+
+  "Decorative Ceiling Fan": [
+    { "model": "Andria/ES", "600mm": null, "900mm": null, "1200mm": 4730, "1320mm": null, "1400mm": null },
+    { "model": "Comfort Air Deco/ES", "600mm": null, "900mm": null, "1200mm": 4405, "1320mm": null, "1400mm": null },
+    { "model": "Drove Deco/ES", "600mm": null, "900mm": null, "1200mm": 4200, "1320mm": null, "1400mm": null },
+    { "model": "Enticer Art/Enticer Wood/Vineer/Hues/ES", "600mm": null, "900mm": 6110, "1200mm": 6110, "1320mm": null, "1400mm": 6345 },
+    { "model": "Enticer/ES", "600mm": 4925, "900mm": 5200, "1200mm": 5200, "1320mm": null, "1400mm": 5375 },
+    { "model": "Eva/ES", "600mm": null, "900mm": null, "1200mm": 5140, "1320mm": null, "1400mm": null },
+    { "model": "Exotica/ES", "600mm": null, "900mm": null, "1200mm": 3455, "1320mm": null, "1400mm": null },
+    { "model": "Festiva/ES", "600mm": null, "900mm": null, "1200mm": 4810, "1320mm": null, "1400mm": null },
+    { "model": "Fusion/ES", "600mm": null, "900mm": null, "1200mm": 4905, "1320mm": null, "1400mm": null },
+    { "model": "Ioniq/ES", "600mm": null, "900mm": null, "1200mm": 5675, "1320mm": null, "1400mm": null },
+    { "model": "Leganza 4B/ES", "600mm": null, "900mm": null, "1200mm": 4575, "1320mm": null, "1400mm": null },
+    { "model": "Milor/ES", "600mm": null, "900mm": null, "1200mm": 4695, "1320mm": null, "1400mm": null },
+    { "model": "Nicola/ES", "600mm": null, "900mm": null, "1200mm": 4245, "1320mm": null, "1400mm": null },
+    { "model": "Quick Air/ES", "600mm": 3615, "900mm": 3615, "1200mm": 3760, "1320mm": null, "1400mm": 3795 },
+    { "model": "Zester/ES", "600mm": null, "900mm": null, "1200mm": 4610, "1320mm": null, "1400mm": null }
+  ],
+
+  "Special Finish Ceiling Fan": [
+    { "model": "EP Trendy/ES", "600mm": 6285, "900mm": 6665, "1200mm": 6665, "1320mm": null, "1400mm": null },
+    { "model": "Octet Underlight/ES", "600mm": null, "900mm": null, "1200mm": null, "1320mm": 21175, "1400mm": null },
+    { "model": "Orion/ES", "600mm": null, "900mm": null, "1200mm": 7840, "1320mm": null, "1400mm": null },
+    { "model": "Stealth Air/ES", "600mm": null, "900mm": null, "1200mm": 10480, "1320mm": null, "1400mm": null },
+    { "model": "Yorker/ES", "600mm": null, "900mm": null, "1200mm": null, "1320mm": null, "1400mm": 12340 }
+  ]
+}
